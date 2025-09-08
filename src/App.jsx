@@ -1,35 +1,39 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "bootstrap//dist/css/bootstrap.min.css";
+// import './assets/vendor/icofont/icofont.min.css';
+// import './assets/vendor/remixicon/remixicon.css';
+// import './assets/vendor/owl.carousel/assets/owl.carousel.min.css';
+// import './assets/vendor/boxicons/css/boxicons.min.css';
+// import './assets/vendor/venobox/venobox.css';
+import "./assets/css/style.css";
 
-function App() {
-  const [count, setCount] = useState(0)
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
 
+import Home from "./components/Home";
+import About from "./components/About";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Projects from "./components/Projects";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
+
+const App = () => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/Personal-Website" element={<Home />} />
+          <Route path="/Personal-Website/about" element={<About />} />
+          <Route path="/Personal-Website/education" element={<Education />} />
+          <Route path="/Personal-Website/experience" element={<Experience />} />
+          <Route path="/Personal-Website/projects" element={<Projects />} />
+          <Route path="/Personal-Website/skills" element={<Skills />} />
+          <Route path="/Personal-Website/contact" element={<Contact />} />
+        </Routes>
+      </Layout>
+    </Router>
+  );
+};
 
-export default App
+export default App;
