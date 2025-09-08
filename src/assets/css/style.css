@@ -5,6 +5,7 @@ Background color: #0d1b2a
 Footer Color: #040f1a
 Accent Color: #e76f51
 Text Color: #e6f1ff
+Accent Text Color: #61dafb
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
@@ -50,6 +51,14 @@ h6 {
   font-family: inherit;
 }
 
+.main-content {
+  position: relative !important;
+  padding-top: 80px; !important;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
 /*--------------------------------------------------------------
 # Navbar
 --------------------------------------------------------------*/
@@ -75,6 +84,7 @@ h6 {
   padding: 0 1rem !important;
   font-size: clamp(1rem, 1rem + 0.2vw, 1.5rem) !important;
   justify-content: flex-end !important;
+  top: 0 !important;
 }
 
 .nav-link {
@@ -241,4 +251,139 @@ h6 {
 
 .footer-icons a:hover::after {
   width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+.home-content {
+  padding: 10rem 2rem !important;
+  text-align: left;
+  color: #e6f1ff;
+  padding: 10rem 5rem !important;
+}
+
+.home-heading h1{
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home-introduction{
+  display: flex;
+  align-items: center;
+  gap: 1rem;  
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 4rem);
+  font-weight: 700;
+  color: #61dafb;
+}
+
+
+.home-introduction h2{
+  font-size: clamp(1.5rem, 1.5rem + 1vw, 4rem);
+  font-weight: 700;
+  margin-bottom: 0rem;
+  color: #e6f1ff;
+}
+
+.home-emphasize{
+  color: #61dafb !important;
+}
+
+.wave{
+  animation-name: wave; /* Refers to the name of your @keyframes element below */
+  animation-duration: 2.1s; /* Change to speed up or slow down */
+  animation-iteration-count: infinite; /* Never stop waving :) */
+  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    transform: rotate(-8deg);
+  }
+  30% {
+    transform: rotate(14deg);
+  }
+  40% {
+    transform: rotate(-4deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.home-typewriter .Typewriter__wrapper {
+  /* This adds the underline */
+  text-decoration: underline;
+
+  /* --- Optional: Customize the underline's appearance --- */
+
+  /* Match your text color or use an accent color */
+  text-decoration-color: #e76f51;
+
+  /* Make the line a bit thicker */
+  text-decoration-thickness: 2px;
+
+  /* Add some space between the text and the line for readability */
+  text-underline-offset: 0.7rem;
+}
+
+/* Mobile */
+@media (max-width: 425px) {
+.home-content {
+  text-align: left;
+  color: #e6f1ff;
+  padding: 5rem 0rem !important;
+}
+}
+
+.home-section{
+  padding-top: 5rem  !important;
+}
+
+.home-about-description h2{
+  font: 2.1em;
+  padding-Bottom: 20px;
+  text-decoration: underline;
+  text-decoration-color: #e76f51;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.7rem;
+}
+
+/* .learn-more-btn{
+  background-color: #e76f51;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  font-size: 1.2rem;
+  transition: background-color 0.3s ease;
+} */
+
+.learn-more-btn {
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff; 
+  color: white;
+  transition: background-color 0.3s ease;
+}
+
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }

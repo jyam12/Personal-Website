@@ -8,9 +8,9 @@ const Layout = ({ children }) => {
     <>
       {/* Navbar Start */}
       <Navbar />
+
       {/* Navbar End */}
       {children}
-
       {/* Footer Start */}
       <Footer />
     </>
