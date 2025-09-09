@@ -43,7 +43,7 @@ const Home = () => {
             <Type />
           </div>
         </Row>
-        <Row className="home-section">
+        <Row className="main-section">
           <Col md={12} className="home-about-description">
             <h2>
               A BRIEF <strong className="home-emphasize">INTRODUCTION</strong>

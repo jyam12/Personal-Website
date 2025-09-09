@@ -51,13 +51,8 @@ h6 {
   font-family: inherit;
 }
 
-.main-content {
-  position: relative !important;
-  padding-top: 80px; !important;
-  padding-bottom: 4rem;
-  min-height: 100vh;
-  min-width: 100vw;
-}
+
+
 
 /*--------------------------------------------------------------
 # Navbar
@@ -254,13 +249,27 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+# Main
+--------------------------------------------------------------*/
+.main-content {
+  position: relative !important;
+  padding-top: 80px; !important;
+  padding-bottom: 4rem;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+.main-section {
+  padding-top: 3rem  !important;
+}
+
+/*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
 .home-content {
-  padding: 10rem 2rem !important;
   text-align: left;
   color: #e6f1ff;
-  padding: 10rem 5rem !important;
+  padding: 5rem 5rem !important;
 }
 
 .home-heading h1{
@@ -350,10 +359,6 @@ h6 {
 }
 }
 
-.home-section{
-  padding-top: 5rem  !important;
-}
-
 .home-about-description h2{
   font: 2.1em;
   padding-Bottom: 20px;
@@ -386,4 +391,98 @@ h6 {
   background-color: #0056b3;
   transform: translateY(-2px);
   box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+}
+
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+
+.about-content {
+  text-align: left;
+  color: #e6f1ff;
+  /* Reduced horizontal padding on smaller screens */
+  padding: 2rem clamp(1.5rem, 5vw, 5rem) !important;
+}
+
+.about-heading h2 {
+  font-size: clamp(1.5rem, 1.5rem + 2vw, 4rem); /* Slightly adjusted clamp for smoother scaling */
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.about-interests-section {
+  padding-top: 2rem !important;
+}
+
+.about-interests-item {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: #09203a;
+  transition: ease-in-out 0.3s;
+  border-radius: 8px; /* Added for softer edges */
+}
+
+.icon-box h3 {
+  font-weight: 700;
+  margin: 0;
+  padding-left: 1rem;
+  line-height: 1;
+  /* Changed to a responsive font size */
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  color: #fff;
+}
+
+.icon-box:hover {
+  background: #042b56eb;
+}
+
+.about-text-img {
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Vertically center the image in its column */
+}
+
+.about-text {
+  padding-top: 2rem;
+  /* Made font-size responsive with clamp() */
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* --- Media Query for Tablets and Mobile Phones --- */
+@media (max-width: 768px) {
+  .about-text {
+    /* Justified text can create awkward spacing on narrow screens. Left-align is better. */
+    text-align: left;
+    padding-top: 1rem; /* Reduce top padding on mobile */
+  }
+
+  .about-heading h2 {
+    text-align: center; /* Center heading on mobile */
+  }
+
+  .about-interests-item {
+    /* Ensure items don't get too wide on small screens */
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
