@@ -77,7 +77,7 @@ h6 {
   position: fixed !important;
   transition: all 0.3s ease-out !important;
   padding: 0 1rem !important;
-  font-size: clamp(1rem, 1rem + 0.2vw, 1.5rem) !important;
+  font-size: 1 rem !important;
   justify-content: flex-end !important;
   top: 0 !important;
 }
@@ -251,7 +251,7 @@ h6 {
 /*--------------------------------------------------------------
 # Main
 --------------------------------------------------------------*/
-.main-content {
+.main-container {
   position: relative !important;
   padding-top: 80px; !important;
   padding-bottom: 4rem;
@@ -259,10 +259,25 @@ h6 {
   min-width: 100vw;
 }
 
+.main-content {
+  text-align: left;
+  color: #e6f1ff;
+  /* Reduced horizontal padding on smaller screens */
+  padding: 2rem clamp(1.5rem, 5vw, 5rem) !important;
+}
 .main-section {
   padding-top: 3rem  !important;
 }
 
+.main-heading h2 {
+  font-size: clamp(1.5rem, 1.5rem + 2vw, 3rem); /* Slightly adjusted clamp for smoother scaling */
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-decoration: underline;
+  text-decoration-color: #e76f51;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.7rem;
+}
 /*--------------------------------------------------------------
 # Home
 --------------------------------------------------------------*/
@@ -398,18 +413,6 @@ h6 {
 # About
 --------------------------------------------------------------*/
 
-.about-content {
-  text-align: left;
-  color: #e6f1ff;
-  /* Reduced horizontal padding on smaller screens */
-  padding: 2rem clamp(1.5rem, 5vw, 5rem) !important;
-}
-
-.about-heading h2 {
-  font-size: clamp(1.5rem, 1.5rem + 2vw, 4rem); /* Slightly adjusted clamp for smoother scaling */
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
 
 .about-interests-section {
   padding-top: 2rem !important;
@@ -470,7 +473,6 @@ h6 {
 /* --- Media Query for Tablets and Mobile Phones --- */
 @media (max-width: 768px) {
   .about-text {
-    /* Justified text can create awkward spacing on narrow screens. Left-align is better. */
     text-align: left;
     padding-top: 1rem; /* Reduce top padding on mobile */
   }
@@ -484,5 +486,144 @@ h6 {
     max-width: 300px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+/*--------------------------------------------------------------
+# Eduation
+--------------------------------------------------------------*/
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.education-info-box {
+  background-color: #040f1a;
+  border-radius: 1rem; /* Corresponds to rounded-2xl */
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 2rem;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #2d3748;
+}
+
+.education-info-box:hover {
+  box-shadow: 0 20px 25px -5px rgba(231, 111, 81, 0.2), 0 10px 10px -5px rgba(231, 111, 81, 0.1);
+  transform: translateY(-5px);
+}
+
+.box-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.icon-container {
+  flex-shrink: 0;
+  background-color: rgba(231, 111, 81, 0.1); /* Transparent accent */
+  padding: 0.75rem;
+  border-radius: 9999px; /* Corresponds to rounded-full */
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  color: #e76f51;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.details-section {
+  flex-grow: 1;
+}
+
+.university {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e6f1ff;
+  margin-bottom: 0.25rem;
+}
+
+.degree {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #61dafb; /* Accent Text Color */
+  margin-bottom: 0rem;
+}
+
+.info-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  color: #cbd5e0;
+}
+
+.info-row {
+  display: flex;
+}
+
+.info-label {
+  font-weight: 600;
+  width: 96px; /* Corresponds to w-24 */
+  flex-shrink: 0;
+  color: #e6f1ff;
+}
+
+.duration{
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  color: #cbd5e0;
+}
+
+
+.certificate-info-box {
+  background-color: #040f1a; /* Footer/Box Color */
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.2), 0 4px 6px -2px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+  padding: 1.5rem 2rem; /* A bit shorter since it has less info */
+  border: 1px solid #2d3748;
+  box-sizing: border-box;
+}
+
+.certificate-info-box:hover {
+  box-shadow: 0 20px 25px -5px rgba(231, 111, 81, 0.2), 0 10px 10px -5px rgba(231, 111, 81, 0.1);
+  transform: translateY(-5px);
+}
+
+.certificate-name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #e6f1ff; /* Text Color */
+  margin-bottom: 0.25rem;
+}
+
+.issuer {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #61dafb; /* Accent Text Color */
+}
+
+.certificate-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+  @media (max-width: 896px) {
+    .certificate-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+  .certificate-grid {
+    grid-template-columns: 1fr;
   }
 }

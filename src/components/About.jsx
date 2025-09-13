@@ -13,10 +13,10 @@ import { LuBrain } from "react-icons/lu";
 
 const About = () => {
   return (
-    <Container fluid className="main-content">
-      <Container fluid className="about-content">
+    <Container fluid className="main-container">
+      <Container fluid className="main-content">
         <Row>
-          <Col md={12} className="about-heading">
+          <Col md={12} className="main-heading">
             <h2>About</h2>
           </Col>
         </Row>
@@ -39,7 +39,7 @@ const About = () => {
         </Row>
 
         <Row className="main-section">
-          <Col md={12} className="about-heading">
+          <Col md={12} className="main-heading">
             <h2>Interests</h2>
           </Col>
         </Row>

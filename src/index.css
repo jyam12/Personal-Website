@@ -11,9 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: clamp(16px, 5vw, 22px);
 }
 
-a {
+/* a {
   font-weight: 500;
   color: #646cff;
   text-decoration: inherit;
@@ -65,4 +66,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
