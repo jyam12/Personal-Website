@@ -1,11 +1,10 @@
 import React from "react";
-import { Container, Row, Col, Button } from "react-bootstrap";
 import Typewriter from "typewriter-effect";
 import { Link } from "react-router-dom";
 
 function Type() {
   return (
-    <div className="home-typewriter">
+    <div className="underline decoration-accent decoration-2 underline-offset-8">
       <Typewriter
         options={{
           strings: [
@@ -25,65 +24,72 @@ function Type() {
 
 const Home = () => {
   return (
-    <Container fluid className="main-content">
-      <Container fluid className="home-content">
-        <Row>
-          <Col md={8} className="home-heading">
-            <h1>
-              Hi I'm <strong className="home-emphasize"> Johnny Yam</strong>{" "}
-              <span className="wave" role="img" aria-labelledby="wave">
-                👋🏻
-              </span>
-            </h1>
-          </Col>
-        </Row>
-        <Row>
-          <div className="home-introduction">
-            <h2>I'm</h2>
+    <section className="min-h-screen w-full pt-20 pb-16">
+      <div className="mx-auto max-w-9/10 space-y-16 px-4 sm:px-20">
+        {/* --- Greeting Section --- */}
+        <div>
+          <h1 className="mb-4 text-4xl font-bold">
+            Hi, I'm <strong className="text-accent-text">Johnny Yam</strong>
+            <span
+              className="animate-wave ml-2 inline-block origin-[70%_70%]"
+              role="img"
+              aria-labelledby="wave"
+            >
+              👋🏻
+            </span>
+          </h1>
+          <div className="flex items-center gap-3 text-4xl font-bold text-accent-text">
+            <h2 className="mb-0 text-3xl font-bold text-text">I'm</h2>
             <Type />
           </div>
-        </Row>
-        <Row className="main-section">
-          <Col md={12} className="home-about-description">
-            <h2>
-              A BRIEF <strong className="home-emphasize">INTRODUCTION</strong>
-            </h2>
-            <p className="home-about-body">
-              I'm a <strong className="home-emphasize">solutions-driven</strong>{" "}
-              Software Engineer specializing in{" "}
-              <strong className="home-emphasize">full-stack development</strong>{" "}
-              and
-              <strong className="home-emphasize"> AI/ML</strong>. My experience
-              includes{" "}
-              <strong className="home-emphasize">
-                building LLM-powered applications
-              </strong>
-              , responsive user interfaces, and scalable database systems. As a
-              <strong className="home-emphasize"> collaborative</strong> and{" "}
-              <strong className="home-emphasize">quick-learning</strong> team
-              player, I enjoy using machine learning to{" "}
-              <strong className="home-emphasize">
-                solve complex data challenges
-              </strong>{" "}
-              and thrive in{" "}
-              <strong className="home-emphasize">
-                fast-paced environments
-              </strong>
-              .
-            </p>
-          </Col>
-        </Row>
-        <Row>
-          <Col md={12}>
-            <Link to="/Personal-Website/about">
-              <Button variant="primary" className="learn-more-btn">
-                Learn More About Me
-              </Button>
+        </div>
+
+        {/* --- Introduction Section --- */}
+        <div className="space-y-3">
+          <h2 className="pb-2 text-5xl font-semibold underline decoration-accent decoration-2 underline-offset-8">
+            A BRIEF <strong className="text-accent-text">INTRODUCTION</strong>
+          </h2>
+          <p className="leading-relaxed text-text text-md">
+            I'm a{" "}
+            <strong className="text-accent-text text-md">
+              solutions-driven
+            </strong>{" "}
+            Software Engineer specializing in{" "}
+            <strong className="text-accent-text text-md">
+              full-stack development
+            </strong>{" "}
+            and
+            <strong className="text-accent-text text-md"> AI/ML</strong>. My
+            experience includes{" "}
+            <strong className="text-accent-text text-md">
+              building LLM-powered applications
+            </strong>
+            , responsive user interfaces, and scalable database systems. As a
+            <strong className="text-accent-text text-md"> collaborative</strong>{" "}
+            and{" "}
+            <strong className="text-accent-text text-md">quick-learning</strong>{" "}
+            team player, I enjoy using machine learning to{" "}
+            <strong className="text-accent-text text-md">
+              solve complex data challenges
+            </strong>{" "}
+            and thrive in{" "}
+            <strong className="text-accent-text text-md">
+              fast-paced environments
+            </strong>
+            .
+          </p>
+          {/* --- Call to Action Button --- */}
+          <div>
+            <Link
+              to="/Personal-Website/about"
+              className="inline-block rounded-lg bg-accent px-6 py-3 text-lg font-semibold text-text button"
+            >
+              Learn More About Me
             </Link>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 

@@ -1,23 +1,24 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { FaEnvelope, FaGithub, FaLinkedinIn } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md="5" className="footer-text">
-          <h1>Designed & Developed by Johnny Yam</h1>
-        </Col>
-        <Col md="4"></Col>
-        <Col md="3" className="footer-icons">
-          <ul>
+    <div className="fixed bottom-0 w-full  bg-footer text-text">
+      <div className="flex h-15 flex-col items-center justify-center sm:justify-between px-4 sm:px-6 lg:px-10 sm:flex-row">
+        {/* Left side: Developer Credit */}
+        <div className="text-center sm:text-left">
+          <p className="text-base">Designed & Developed by Johnny Yam</p>
+        </div>
+
+        <div className="sm:mt-0">
+          <ul className="flex items-center space-x-5">
             <li>
               <a
                 href="mailto:jyam333@gmail.com"
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative py-1 z-10 block transition-transform duration-200 ease-out link-underline-accent"
               >
                 <FaEnvelope />
               </a>
@@ -28,6 +29,7 @@ const Footer = () => {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative py-1  z-10 block transition-transform duration-200 ease-out link-underline-accent"
               >
                 <FaGithub />
               </a>
@@ -38,14 +40,15 @@ const Footer = () => {
                 style={{ color: "white" }}
                 target="_blank"
                 rel="noopener noreferrer"
+                className="relative py-1 z-10 block transition-transform duration-200 ease-out link-underline-accent"
               >
                 <FaLinkedinIn />
               </a>
             </li>
           </ul>
-        </Col>
-      </Row>
-    </Container>
+        </div>
+      </div>
+    </div>
   );
 };
 

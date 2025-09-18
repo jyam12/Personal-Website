@@ -1,5 +1,4 @@
 import React from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import { AiOutlineRobot } from "react-icons/ai";
 import {
   FaLayerGroup,
@@ -11,93 +10,74 @@ import {
 } from "react-icons/fa";
 import { LuBrain } from "react-icons/lu";
 
+const InterestCard = ({ icon: Icon, title }) => (
+  <div className="flex items-center justify-center p-5 bg-box transition-all duration-300 ease-in-out rounded-lg hover:bg-box-hover hover:shadow-xl hover:-translate-y-1">
+    {Icon && <Icon className="h-6 w-6 text-accent" />}
+    <h3 className="font-bold m-0 pl-4 leading-none text-lg text-text">
+      {title}
+    </h3>
+  </div>
+);
+
 const About = () => {
+  const interests = [
+    { icon: AiOutlineRobot, title: "LLM Application" },
+    { icon: LuBrain, title: "Machine Learning" },
+    { icon: FaLayerGroup, title: "Full-Stack Development" },
+    { icon: FaCode, title: "Software Engineering" },
+    { icon: FaExchangeAlt, title: "Digital Transformation" },
+    { icon: FaTools, title: "Software Engineering" },
+    { icon: FaBroadcastTower, title: "Communication Systems" },
+    { icon: FaRegImage, title: "Image Processing" },
+  ];
   return (
-    <Container fluid className="main-container">
-      <Container fluid className="main-content">
-        <Row>
-          <Col md={12} className="main-heading">
-            <h2>About</h2>
-          </Col>
-        </Row>
-        <Row className="about-section">
-          <Col md={4} className="about-text">
-            <img src="src/assets/img/profile_pic.png" className="profile-pic" />
-          </Col>
-          <Col md={8} className="about-text">
-            <p>
-              As a final-year Electronic Engineering student at HKUST with an
-              extended major in Artificial Intelligence, I specialize in signal
-              processing & communication and Machine Learning. I am a proactive
-              learner, skilled at quickly mastering new concepts by leveraging
-              online resources and collaborating with peers. I thrive on
-              exploring novel ideas and believe that learning from
-              experimentation and feedback is the most effective way to discover
-              optimal solutions.
-            </p>
-          </Col>
-        </Row>
+    <section className="min-h-screen w-full bg-gray-900 pt-20 pb-16 text-text">
+      <div className="mx-auto max-w-9/10 space-y-16 px-4 sm:px-20">
+        {/* --- About Me Section --- */}
+        <div className="space-y-8">
+          <h2 className="text-center text-5xl font-bold underline decoration-accent decoration-2 underline-offset-8 md:text-left">
+            About Me
+          </h2>
+          <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
+            <div className="flex-shrink-0">
+              <img
+                src="src/assets/img/profile_pic.png"
+                alt="Johnny Yam"
+                className="mx-auto block h-auto w-full max-w-xs rounded-full shadow-lg"
+              />
+            </div>
+            <div className="text-justify text-md leading-7 text-text md:text-left">
+              <p>
+                As a final-year Electronic Engineering student at HKUST with an
+                extended major in Artificial Intelligence, I specialize in
+                signal processing & communication and Machine Learning. I am a
+                proactive learner, skilled at quickly mastering new concepts by
+                leveraging online resources and collaborating with peers. I
+                thrive on exploring novel ideas and believe that learning from
+                experimentation and feedback is the most effective way to
+                discover optimal solutions.
+              </p>
+            </div>
+          </div>
+        </div>
 
-        <Row className="main-section">
-          <Col md={12} className="main-heading">
-            <h2>Interests</h2>
-          </Col>
-        </Row>
-        <Row className="about-interests-section">
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <AiOutlineRobot />
-              <h3>LLM Applicaiton</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <LuBrain />
-              <h3>Machine Learning</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaLayerGroup />
-              <h3>Full-Stack Development</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaCode />
-              <h3>Software Engineering</h3>
-            </div>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaExchangeAlt />
-              <h3>Digital Transformation</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaTools />
-              <h3>Software Engineering</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaBroadcastTower />
-              <h3>Communication Systems</h3>
-            </div>
-          </Col>
-          <Col md={3} className="about-interests-item">
-            <div className="icon-box">
-              <FaRegImage />
-              <h3>Image Processing</h3>
-            </div>
-          </Col>
-        </Row>
-      </Container>
-    </Container>
+        {/* --- Interests Section --- */}
+        <div className="space-y-8">
+          <h2 className="text-center text-5xl font-bold underline decoration-accent decoration-2 underline-offset-8">
+            Interests
+          </h2>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {interests.map((interest, index) => (
+              <InterestCard
+                key={index}
+                icon={interest.icon}
+                title={interest.title}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
