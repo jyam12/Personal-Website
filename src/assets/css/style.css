@@ -19,6 +19,8 @@ Accent Text Color: #61dafb
   --color-accent-text: #61dafb;
   --color-box: #09203a;
   --color-box-hover: #042b56eb;
+  --color-tag: #314158;
+  --color-tag-text: #cad5e2;
 }
 
 .link-underline-accent {
@@ -68,5 +70,28 @@ Accent Text Color: #61dafb
     /* Combines the base shadow with the offset ring */
     box-shadow: theme("boxShadow.lg"), 0 0 0 2px theme("colors.gray.900"),
       /* ring-offset-2 ring-offset-gray-900 */ 0 0 0 4px theme("--color-accent"); /* ring-2 ring-orange-400 */
+  }
+}
+
+.button_close {
+  /* Base styles from shadow-lg and transition */
+  box-shadow: theme("boxShadow.lg");
+  transition-property: transform, background-color, box-shadow;
+  transition-duration: 300ms;
+  transition-timing-function: theme("transitionTimingFunction.in-out");
+
+  /* Hover styles from hover:-translate-y-1 and hover:bg-orange-600 */
+  &:hover {
+    transform: translateY(-0.25rem); /* Equivalent to -translate-y-1 */
+    background-color: theme("colors.slate.600");
+  }
+
+  /* Focus styles for accessibility */
+  &:focus {
+    outline: none;
+    /* Combines the base shadow with the offset ring */
+    box-shadow: theme("boxShadow.lg"), 0 0 0 2px theme("colors.gray.900"),
+      /* ring-offset-2 ring-offset-gray-900 */ 0 0 0 4px
+        theme("--color-slate-700"); /* ring-2 ring-orange-400 */
   }
 }
