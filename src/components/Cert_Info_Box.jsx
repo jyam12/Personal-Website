@@ -1,4 +1,5 @@
 import React from "react";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const CertificateInfoBox = ({
   icon_location_path,
@@ -10,7 +11,7 @@ const CertificateInfoBox = ({
       <div className="flex items-center gap-1 ">
         <div className="flex-shrink-0 p-3 rounded-full">
           <img
-            src={icon_location_path}
+            src={BASE_URL + icon_location_path}
             alt={`${issuer} logo`}
             className="h-10 w-10 rounded-full object-contain bg-white p-1"
           />

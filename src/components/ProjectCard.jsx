@@ -1,4 +1,5 @@
 import React from "react";
+const BASE_URL = import.meta.env.BASE_URL;
 
 const ProjectCard = ({ project, onClick }) => {
   return (
@@ -7,7 +8,7 @@ const ProjectCard = ({ project, onClick }) => {
       className="group relative cursor-pointer overflow-hidden rounded-lg bg-background/50 shadow-lg transition-all duration-300 hover:shadow-accent/50"
     >
       <img
-        src={project.imageUrl}
+        src={BASE_URL + project.imageUrl}
         alt={project.name}
         className="w-full object-cover transition-transform duration-300 group-hover:scale-105"
       />

@@ -8,6 +8,8 @@ import {
   TransitionChild,
 } from "@headlessui/react";
 
+const BASE_URL = import.meta.env.BASE_URL;
+
 const Project = ({ isOpen, onClose, project }) => {
   if (!project) return null;
 
@@ -46,7 +48,7 @@ const Project = ({ isOpen, onClose, project }) => {
                 </DialogTitle>
                 <div className="mt-4">
                   <img
-                    src={project.imageUrl}
+                    src={BASE_URL + project.imageUrl}
                     alt={project.name}
                     className="mb-4 w-full rounded-lg object-cover"
                   />

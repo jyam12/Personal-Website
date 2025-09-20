@@ -1,6 +1,6 @@
 export const experiences = [
     {
-      icon_location_path: "src/assets/img/exp_logo/ibm_logo.png",
+      icon_location_path: "/img/exp_logo/ibm_logo_exp.png",
       company_name: "IBM China/Hong Kong Limited",
       position: "Summer Intern",
       duration: "Jul 2025 – Aug 2025",
@@ -10,7 +10,7 @@ export const experiences = [
       ],
     },
     {
-      icon_location_path: "src/assets/img/exp_logo/Deloitte_logo.jpg",
+      icon_location_path: "/img/exp_logo/Deloitte_logo.jpg",
       company_name: "Deloitte China",
       position: "Technical Consultant Intern",
       duration: "Jan 2024 – Aug 2024",
@@ -24,7 +24,7 @@ export const experiences = [
       ],
     },
     {
-      icon_location_path: "src/assets/img/exp_logo/wmc_logo.jpeg",
+      icon_location_path: "/img/exp_logo/wmc_logo.jpeg",
       company_name: "Wealth Management Cube Limited",
       position: "Fintech System/ Web Developer Intern",
       duration: "Jun 2023 – Aug 2023",

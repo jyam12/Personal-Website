@@ -1,5 +1,6 @@
 import React from "react";
 import { AiOutlineRobot } from "react-icons/ai";
+
 import {
   FaLayerGroup,
   FaCode,
@@ -9,6 +10,8 @@ import {
   FaRegImage,
 } from "react-icons/fa";
 import { LuBrain } from "react-icons/lu";
+
+const BASE_URL = import.meta.env.BASE_URL;
 
 const InterestCard = ({ icon: Icon, title }) => (
   <div className="flex items-center justify-center p-5 bg-box transition-all duration-300 ease-in-out rounded-lg hover:bg-box-hover hover:shadow-xl hover:-translate-y-1">
@@ -41,7 +44,7 @@ const About = () => {
           <div className="flex flex-col items-center gap-8 md:flex-row md:gap-12">
             <div className="flex-shrink-0">
               <img
-                src="src/assets/img/profile_pic.png"
+                src={BASE_URL + "/img/profile_pic.png"}
                 alt="Johnny Yam"
                 className="mx-auto block h-auto w-full max-w-xs rounded-full shadow-lg"
               />

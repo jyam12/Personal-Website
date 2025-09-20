@@ -3,6 +3,7 @@ import EducationInfoBox from "./Education_Info_Box";
 import CertificateInfoBox from "./Cert_Info_Box";
 import { educationHistory } from "../assets/data/education.js";
 import { certificates } from "../assets/data/certificate.js";
+
 const Education = () => {
   return (
     <section className="min-h-screen w-full bg-background pt-20 pb-16 text-text">
@@ -15,15 +16,7 @@ const Education = () => {
 
         <div className="grid grid-cols-1 gap-6">
           {educationHistory.map((educationHistory) => (
-            <EducationInfoBox
-              icon_location_path={educationHistory.icon_location_path}
-              university={educationHistory.university}
-              degree={educationHistory.degree}
-              sub_degree={educationHistory.sub_degree}
-              duration={educationHistory.duration}
-              main_area={educationHistory.main_area}
-              cga={educationHistory.cga}
-            />
+            <EducationInfoBox educationinfo={educationHistory} />
           ))}
         </div>
 
