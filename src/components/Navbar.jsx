@@ -1,6 +1,5 @@
 import { React, useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-
+import { FaBars, FaTimes } from "react-icons/fa";
 import {
   Disclosure,
   DisclosureButton,
@@ -135,9 +134,9 @@ const Navbar = () => {
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <FaTimes className="block h-6 w-6" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <FaBars className="block h-6 w-6" aria-hidden="true" />
                   )}
                 </DisclosureButton>
               </div>
