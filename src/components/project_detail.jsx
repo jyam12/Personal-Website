@@ -40,7 +40,7 @@ const Project = ({ isOpen, onClose, project }) => {
               <DialogPanel className="w-full max-w-3xl transform overflow-hidden rounded-2xl bg-box p-6 text-left align-middle shadow-xl transition-all">
                 <DialogTitle
                   as="h3"
-                  className="text-2xl font-bold leading-6 text-left underline decoration-accent decoration-2 underline-offset-8 md:text-left"
+                  className="text-2xl font-bold leading-6 whitespace-nowrap text-left underline decoration-accent decoration-2 underline-offset-8 md:text-left"
                 >
                   {project.name}
                 </DialogTitle>
