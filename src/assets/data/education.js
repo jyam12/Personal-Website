@@ -7,7 +7,7 @@
       sub_degree: "Minor in Information Technology",
       main_area:
         "Signal Processing and Communications, Artificial Intelligence and Embedded Systems",
-      cga: "3.16/4.3",
+      cga: "3.177/4.3",
       duration: "Sep 2021 - Jun 2026 (Expected)",
     },
   ];

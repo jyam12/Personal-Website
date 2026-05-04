@@ -11,7 +11,7 @@ function Type() {
             "AI Engineer",
             "Technical Consultant",
             "Full-Stack Developer",
-            "Software Engineer",
+            "Electronic Engineer",
           ],
           autoStart: true,
           loop: true,
@@ -54,9 +54,9 @@ const Home = () => {
             <strong className="text-accent-text text-md">
               solutions-driven
             </strong>{" "}
-            Software Engineer specializing in{" "}
+            Electronic Engineer specializing in{" "}
             <strong className="text-accent-text text-md">
-              full-stack development
+              signal processing & communication
             </strong>{" "}
             and
             <strong className="text-accent-text text-md"> AI/ML</strong>. My

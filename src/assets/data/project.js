@@ -1,6 +1,19 @@
 export const projects = [
   {
     id: 1,
+    name: 'LoRa Powered Campsite Occupancy Monitor',
+    tagline: 'An IoT-based campsite occupancy monitoring system using LoRa technology',
+    category: 'Signal Processing',
+    imageUrl: '/img/project_img/LoRa_Campsite_Monitor.png',
+    tech: ["LoRa","IoT","C++","Python","YoLo v11"],
+    videoUrl: '',
+    liveUrl: '',
+    repoUrl: '',
+    description: 'LoRa Powered Campsite Occupancy Monitor is an IoT-based solution that leverages LoRa technology to monitor and manage campsite occupancy in real-time.',
+    challenges: '',
+  },
+  {
+    id: 2,
     name: 'High-Frequency Trading with Machine Learning Strategy Analysis',
     tagline: 'A high-frequency cryptocurrency trading strategies',
     category: 'Machine Learning',
@@ -13,7 +26,7 @@ export const projects = [
     challenges: '',
   },
   {
-    id: 2,
+    id: 3,
     name: 'Blink',
     tagline: 'A web-based educational platform',
     category: 'LLM Application',
@@ -25,4 +38,5 @@ export const projects = [
     description: 'Blink is a web-based educational platform designed for both instructors and students. It provides a simple and intuitive interface for course content delivery and interaction.',
     challenges: '',
   },
+
 ];
